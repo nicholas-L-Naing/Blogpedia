@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <header>
+            <meta charset="utf-8">
+            <meta name="Description" content="Testing">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Blogpedia</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" href="post.css">
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        </header>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm transparent-nav">
+            <div class="navbar-brand" id="brand-name"><div style="color:white;text-decoration: none;">Blogpedia</div></div>      
+                <a class="nav-link nav-color" href="post_list.html">Home <span class="sr-only"></span></a>
+                <div class="nav-link mr-2 btn-outline-success font-weight-bold"  id="add-post" style="cursor: pointer;">Add post</div>
+                <div class="nav-link mr-2 btn-outline-warning font-weight-bold"  id="edit-post">Edit</div>
+                <div class="nav-link mr-2 btn-outline-danger font-weight-bold" id="delete-post">Delete</div>
+                <div class="nav-link mr-2 nav-color" id="log-out" style="cursor: pointer;">Log out</div>                
+            </div>
+        </nav>
+        <div class="post-grid-container">
+            <div class="poster"><img src="https://picsum.photos/1000/900" alt="image not found">
+            </div>
+            <div class="side-posts">
+                <div class="side-posts-title">Latest Posts</div>
+            </div>
+            <div class="main-posts">
+                <div class="btn btn-outline-light next">=></div>
+                <div class="btn btn-outline-light prev"><=</div>
+            </div>
+        </div>
+        <div class="confirmation-box">
+            <div class="confirmation-body">Are you sure you want to delete this post?</div>
+            <div class="confirm-options">
+                <div class="cancel-button">Cancel</div>
+                <div class="yes-button">Yes</div>
+            </div>
+        </div>
+        <div class="post-detail-container">
+            <div class="detail-post"></div>
+            <div class="similar-posts-title font-weight-bold" style="font-size: 20px;">Similar Posts</div>
+            <div class="similar-posts"></div>
+        </div>
+        <div class="post-form-container">
+            <div style="margin: auto;">
+                <h3>Make a blog post</h3>
+            </div>
+            <form action="post_list.html" class="post-form">
+                <div class="post-author">
+                    <input type="text" id="post-author" name="post_author" placeholder="author of this post" required>
+                </div>
+                <div class="post-title">
+                    <input type="text" id="post-title" name="post_title" placeholder="title of this post" required>
+                </div>
+                <div class="image-url">
+                    <input type="url" id="image-url" name="image_url" placeholder="image url here" required>
+                </div>
+                <div class="post-content">
+                    <textarea id="post-content" name="post_content" placeholder="write your post here" required></textarea>
+                </div>
+            </form>
+            <div class="post-form-buttons">
+                <div class="btn btn-outline-light" id="back">Back</div>
+                <div class="btn btn-outline-primary" style="color:white" id="post-submit">Post</div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="post.js"></script>
+        <script src="post_detail.js"></script>
+    </body>
+</html>

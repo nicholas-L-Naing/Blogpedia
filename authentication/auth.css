@@ -1,0 +1,191 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background-image: url('../cityscape.jpg');
+    background-position: center;
+    backdrop-filter: blur(1.7px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+}
+/* for nav bar */
+
+.transparent-nav{
+    background-color:#9899A6;
+    display: flex;
+    flex-direction: row;
+    opacity: 80%;
+    color: rgb(255, 255, 255);
+    width:100vw;
+}
+.nav-color {
+    color: (231,207,180);
+    font-weight: bold;
+}
+#brand-name{
+    font-weight: bolder;
+    font-size: 1.4em;
+    margin-left: 15px;
+}
+/* for log_in page */
+
+#log_in_form{
+    margin-top: 40px;
+}
+#username,#pass{
+    font-weight: bolder;
+    opacity: 99%;
+    width:222px;
+	height: 30px;
+	padding-left:10px;
+    border-radius: 10px;
+    outline-style: hidden;
+    outline-color: #9899A6;
+}
+#log{
+    font-weight:bolder;
+    width:100px;
+	padding:10px;
+    border-style:solid;
+    border-width: 3px;
+    border-radius: 20px;
+	margin-right: 10px;
+}
+.user{
+	position:relative;
+	top:23px;
+    border-radius: 20%;
+    animation-name:user;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+}
+.password{
+	position:relative;
+	top:26px;
+	animation-name:password;
+	animation-fill-mode: forwards;
+	animation-duration: 2s;
+}
+.log_button{
+	position:relative;
+	top:30px;
+	left:25px;
+	animation: ease-out;
+	animation-duration:2s;
+    animation-name:button_log_sign;
+}
+
+#title{
+    animation-duration:3s;
+    animation-name:title;
+}
+@keyframes user{
+	0%{left:-1000px;}
+	100%{left:-20px}
+}
+@keyframes password{
+	0%{left:-1000px;}
+	100%{left:-20px}
+}
+
+@keyframes button_log_sign{
+	0%{opacity:0%;position:relative;top:-1000px;}
+	100%{opacity:100%;position:relative;top:30px;}
+}
+@keyframes reset_pass{
+	0%{opacity:0%}
+	100%{opacity:100%}
+}
+@keyframes title{
+	0%{opacity:0%}
+	100%{opacity:100%}
+}
+/* for sign_up page */
+#sign_up_form{
+    margin-top: 5px;
+    font-weight: bolder;
+    display: none;
+}
+.username{
+	position:relative;
+	top:23px;
+    border-radius: 20%;
+    animation-name:new_user;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+}
+.mail{
+	position:relative;
+	top:29px;
+	animation-name:mail;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+}
+.ps1{
+	position:relative;
+	top:32px;
+	animation-name:ps1;
+	animation-fill-mode: forwards;
+	animation-duration: 2s;
+}
+.ps2{
+	position:relative;
+	top:35px;
+	animation-name:ps2;
+	animation-fill-mode: forwards;
+	animation-duration: 2.5s;
+}
+.sign_up{
+	position:relative;
+	top:35px;
+    left:30px;
+    font-weight:bolder;
+    border-radius: 20px;
+    width:100px;
+	padding:10px;
+    border-style:solid;
+    border-width: 3px;
+    border-radius: 20px;
+    animation-duration:3s;
+    animation-name:sign_up;
+}
+#name,#fname,#lname,#mail,#ps1,#ps2{
+	border-radius: 10px;
+	font-weight: bold;
+	width:222px;
+	height: 30px;
+	padding-left:10px;
+	border-style: solid;
+    outline-color:#9899A6;
+}
+@keyframes new_user{
+	0%{left:-1000px;}
+	100%{left:-15px}
+}
+@keyframes mail{
+	0%{left:-1000px;}
+	100%{left:1px}
+}
+@keyframes ps1{
+	0%{left:-1000px;}
+	100%{left:-20px}
+}
+@keyframes ps2{
+	0%{left:-1000px;}
+	100%{left:-55px}
+}
+@keyframes sign_up{
+	0%{opacity:0%;position:relative;top:-1000px;}
+	100%{opacity:100%;position:relative;top:35px;}
+}
+
+@media(width<=950px){
+    #log_in_form,#sign_up_form{
+        margin:auto;
+        position: relative;
+        top:10%;
+    }
+}
